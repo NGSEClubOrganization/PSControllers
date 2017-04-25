@@ -24,14 +24,39 @@
 
 	PS3: [
 		1,0,3,2,
-		0,3,
-		4,5,6,7,
-		12,13,14,15,
 		8,9,
-		10,11
+		12,15,13,14,
+		3,1,0,2,
+		6,7,
+		4,5
 	],
 
-	PS2: [],
+	PS2: [
+		1,0,2,5,
+		8,9,
+		9,9,9,9, //dpads for ps2 actually works as a axis 9. P.S. values below are rounded
+		/*
+		Idle:		3.2857
+		Up:			1
+		Right:		-0.42857
+		Down:		0
+		Left:		0.714
+		this program does not uses Dpads, so it will be fine, but if future programs uses this, it might cause error for ps2 controller.
+		*/
+		0,1,2,3,
+		4,5,
+		6,7
+	],
+
+	xboxOne: [
+		1,0,3,2,
+		8,9,
+		12,15,17,18,
+		3,1,0,2,
+		6,7,
+		4,5
+	],
+
 
 	/* 
 	running this method will start the the system using the given controller values.
@@ -62,7 +87,7 @@
 		this.DPAD_DOWN = valuesArray[8];
 		this.DPAD_LEFT = valuesArray[9];
 
-		this.TRAINGE = valuesArray[10];
+		this.TRIANGE = valuesArray[10];
 		this.CIRCLE = valuesArray[11];
 		this.X = valuesArray[12];
 		this.SQUARE = valuesArray[13];
@@ -72,6 +97,7 @@
 
 		this.LEFT_BUMPER = valuesArray[16];
 		this.RIGHT_BUMPER = valuesArray[17];
+
 		
 		return this;
 	}
